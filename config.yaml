@@ -1,0 +1,35 @@
+# SPARTA Configuration File
+# Default parameters for Spatial Metabolite Alignment & Co-localization Analysis
+
+# Centroid Calculation
+centroid:
+  default_method: "weighted"  # "weighted" or "binary"
+  snr_floor_multiplier: 3.0
+  binary_threshold: null  # null = use SNR floor
+
+# Image Shifting
+shifting:
+  pad_value: 0.0
+  allow_wraparound: false
+
+# RGB Composite
+rgb_composite:
+  percentile_clip: 99.0
+  use_green_blend: false  # If true, use green channel for co-enrichment
+
+# Co-localization
+colocalization:
+  min_b_intensity: 10.0
+  handle_zeros: "nan"  # "nan" or "zero"
+
+# Heatmap Reconstruction
+heatmap:
+  default_tolerance: 0.5  # m/z tolerance in Da
+
+# Visualization
+visualization:
+  default_colormap: "Viridis"
+  colocalization_colormap: "RdBu_r"
+  log2_clip_min: 0.01
+  log2_clip_max: 100.0
+
